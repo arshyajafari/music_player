@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/fontawesome-6.3.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="player-body">
+        <div class="album-image">
+          <div class="backdrop"></div>
+          <div class="album-overlay"></div>
+          <img src="" alt="" />
+        </div>
+        <div class="album-cover">
+          <div class="album-info">
+            <img src="" alt="" />
+            <div class="title-box">
+              <h3 class="song-title"></h3>
+              <h4 class="artist-title"></h4>
+            </div>
+          </div>
+          <div class="icon-box">
+            <i class="fas fa-shuffle" id="shuffle"></i>
+            <i class="fas fa-repeat" id="repeat"></i>
+          </div>
+        </div>
+        <div class="track-box">
+          <audio id="audio">
+            <source src="" />
+          </audio>
+          <div class="track-range">
+            <div></div>
+          </div>
+          <div class="time-box">
+            <div class="start-time">00:00</div>
+            <div class="end-time">00:00</div>
+          </div>
+          <div class="player-bar">
+            <div class="buttons">
+              <i class="fas fa-stop" id="stop"></i>
+              <i class="fas fa-backward" id="previous"></i>
+              <i class="fas fa-play play" id="play"></i>
+              <i class="fas fa-forward" id="next"></i>
+            </div>
+            <div class="volume-box">
+              <i class="fas fa-volume-low" id="volume"></i>
+              <div class="volume-range">
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
