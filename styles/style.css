@@ -221,11 +221,54 @@ body {
 }
 .player-body .track-box .track-range {
   width: 95%;
-  height: 4px;
-  background-color: #65717e;
-  border-radius: 2px;
+  height: 10px;
+  position: relative;
   margin: 15px auto;
+}
+.player-body .track-box .track-range .progress-input {
+  width: 100%;
+  height: 100%;
+  background-color: #65717e;
+  border-radius: 8px;
+  position: absolute;
+  outline: none;
+  overflow: hidden;
   cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.player-body .track-box .track-range .progress-input::-webkit-slider-thumb {
+  width: 6px;
+  height: 6px;
+  background-color: #3fbbe9;
+  border-radius: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.player-body .track-box .track-range .progress-input::-moz-range-thumb {
+  width: 6px;
+  height: 6px;
+  background-color: #3fbbe9;
+  border-radius: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.player-body .track-box .track-range .progress-input::-webkit-slider-thumb:hover,
+.player-body .track-box .track-range .progress-input::-webkit-slider-thumb:focus,
+.player-body .track-box .track-range .progress-input::-webkit-slider-thumb:active {
+  width: 9px;
+  height: 9px;
+}
+.player-body .track-box .track-range .progress-input::-moz-range-thumb:hover,
+.player-body .track-box .track-range .progress-input::-moz-range-thumb:focus,
+.player-body .track-box .track-range .progress-input::-moz-range-thumb:active {
+  width: 9px;
+  height: 9px;
 }
 .player-body .track-box .time-box {
   width: 95%;
@@ -315,16 +358,47 @@ body {
 }
 .player-body .track-box .player-bar .volume-box .volume-range {
   width: 100%;
-  height: 4px;
-  background-color: #65717e;
-  border-radius: 2px;
+  height: 5px;
+  position: relative;
   margin: 15px auto;
-  cursor: pointer;
 }
 @media (max-width: 699px) {
   .player-body .track-box .player-bar .volume-box .volume-range {
     display: none;
   }
+}
+.player-body .track-box .player-bar .volume-box .volume-range .volume-input {
+  width: 100%;
+  height: 100%;
+  background-color: #65717e;
+  border-radius: 5px;
+  position: absolute;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.player-body .track-box .player-bar .volume-box .volume-range .volume-input::-webkit-slider-thumb {
+  width: 5px;
+  height: 5px;
+  background-color: #3fbbe9;
+  border-radius: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.player-body .track-box .player-bar .volume-box .volume-range .volume-input::-moz-range-thumb {
+  width: 5px;
+  height: 5px;
+  background-color: #3fbbe9;
+  border-radius: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .player-body .track-box .player-bar .volume-box i {
   color: #65717e;
