@@ -27,6 +27,10 @@ var index = 0,
 
 // select elements
 const audio = document.querySelector("#audio"),
+  progressRange = document.querySelector(".progress-input"),
+  volumeRange = document.querySelector(".volume-input"),
+  startTime = document.querySelector(".start-time"),
+  endTime = document.querySelector(".end-time"),
   playBtn = document.querySelector("#play"),
   stopBtn = document.querySelector("#stop"),
   previousBtn = document.querySelector("#previous"),
@@ -58,14 +62,27 @@ setInterval(() => {
     durationSec = "0" + durationSec;
   }
 
-  document.querySelector(
-    ".start-time"
-  ).innerHTML = `${currentMin}:${currentSec}`;
+  startTime.innerHTML = `${currentMin}:${currentSec}`;
 
-  document.querySelector(
-    ".end-time"
-  ).innerHTML = `${durationMin}:${durationSec}`;
+  endTime.innerHTML = `${durationMin}:${durationSec}`;
+
+  progressRange.value = audio.currentTime;
+  progressRange.setAttribute("max", audio.duration);
 }, 1000);
+
+// progress range music
+progressRange.addEventListener("input", () => {
+  audio.currentTime = progressRange.value;
+});
+
+// volume range music
+volumeRange.addEventListener("input", () => {
+  audio.volume = volumeRange.value / 100;
+
+  if (+volumeRange.value === 0) muteBtn.className = "fas fa-volume-off";
+  else if (+volumeRange.value > 50) muteBtn.className = "fas fa-volume-high";
+  else muteBtn.className = "fas fa-volume-low";
+});
 
 // play music
 playBtn.addEventListener("click", () => {
