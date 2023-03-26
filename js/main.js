@@ -141,10 +141,12 @@ muteBtn.addEventListener("click", () => {
   if (volumeStatus) {
     muteBtn.className = "fas fa-volume-mute";
     audio.volume = 0;
+    volumeRange.value = 0;
     volumeStatus = false;
   } else {
     muteBtn.className = "fas fa-volume-low";
     audio.volume = 0.4;
+    volumeRange.value = 40;
     volumeStatus = true;
   }
 });
